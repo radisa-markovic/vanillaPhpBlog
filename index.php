@@ -10,6 +10,9 @@ $router = new Router();
 $router->get('/', 'blog/index.php');
 $router->get('/blogs', 'blog/index.php');
 $router->get('/blogs/new', 'blog/create.php');
+$router->post("/blogs/store", "blog/store.php");
+
+$router->get("/blog", "blog/show.php");
 
 try 
 {
@@ -18,10 +21,3 @@ try
     dd($exception); 
     // return redirect($router->previousUrl());
 }
-//TODO: make a separate home controller
-
-// view('404.php', [
-//     'pageTitle' => "Page not found",
-//     'uri' => $uri,
-// ]);
-// die();

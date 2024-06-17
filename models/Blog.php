@@ -1,5 +1,5 @@
 <?php
-
+//TODO: add SQL database store logic
 class Blog
 {
     private static $blogPosts = [
@@ -23,5 +23,24 @@ class Blog
     public static function index()
     {
         return self::$blogPosts;
+    }
+
+    public static function get($id)
+    {
+        foreach (self::$blogPosts as $post)
+        {
+            if($post['id'] == $id)
+            {
+                // dd($post);
+                return $post;
+            }
+        }
+
+        return null;
+    }
+
+    public static function add($newPost)
+    {
+        self::$blogPosts[] = $newPost;
     }
 }
