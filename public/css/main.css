@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.navigation-link
+{
+    color: white;
+    font-size: 25px;
+}
+
+.navigation-link:hover,
+.navigation-link.active
+{
+    filter: brightness(65%);
+}
+
+.container
+{
+    width: 95%;
+    margin: auto;
+}
+
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
